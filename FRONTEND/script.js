@@ -41,7 +41,7 @@ const fuelBarScPlyr = document.getElementById("playerTwoBar");
 
 const gameCodeLine = document.getElementById("gameCoding");
 
-var socket = io("http://localhost:8080");
+var socket = io("https://immense-fortress-16826.herokuapp.com/");
 
 socket.on("init", handleInit);
 socket.on("gameState", handleGameState);

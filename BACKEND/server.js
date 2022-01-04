@@ -1,6 +1,6 @@
-const io = require("socket.io")(8080, {
+const io = require("socket.io")(process.env.PORT || 8080, {
   cors: {
-    origin: ["http://127.0.0.1:8080"],
+    origin: ["https://immense-fortress-16826.herokuapp.com/"],
   },
 });
 
@@ -93,15 +93,14 @@ io.on("connect", (client) => {
       return;
     }
     client.join(roomName);
-    startGameIntervalWatching(roomName)
+    startGameIntervalWatching(roomName);
   }
 });
 
-function startGameIntervalWatching(roomName){
+function startGameIntervalWatching(roomName) {
   const intervalId = setInterval(() => {
-
-  emitGameState(roomName, state[roomName]);
-}, 1000 / FRAME_RATE);
+    emitGameState(roomName, state[roomName]);
+  }, 1000 / FRAME_RATE);
 }
 function startGameInterval(roomName, client = null) {
   const intervalId = setInterval(() => {

@@ -1,8 +1,4 @@
-const io = require("socket.io")(process.env.PORT || 8080, {
-  cors: {
-    origin: ["https://immense-fortress-16826.herokuapp.com/"],
-  },
-});
+const io = require("socket.io")();
 
 const { createGameState, gameLoop, getUpdateVelocity } = require("./game");
 const { FRAME_RATE } = require("./constants");
@@ -132,4 +128,4 @@ function emitGameOver(roomName, winner) {
   io.sockets.in(roomName).emit("gameOver", JSON.stringify({ winner }));
 }
 
-// io.listen(8080);
+io.listen(process.env.PORT || 8080);

@@ -1,6 +1,6 @@
 const io = require("socket.io")(process.env.PORT || 8080, {
   cors: {
-    origin: ["https://immense-fortress-16826.herokuapp.com/"],
+    origin: ["https://jovial-dubinsky-dadd96.netlify.app"],
   },
 });
 

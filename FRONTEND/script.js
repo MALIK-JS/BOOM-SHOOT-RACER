@@ -147,7 +147,7 @@ function reset() {
 function keyDown(event) {
   // console.log("code clnt ", event.keyCode);
   socket.emit("keydown", event.keyCode);
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+  if (event.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
 }

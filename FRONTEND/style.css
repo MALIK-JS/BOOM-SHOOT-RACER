@@ -1,0 +1,272 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+}
+
+#initialScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#initialScreen h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+#gameScreen {
+  display: none;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.myGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#game-scrn {
+  box-shadow: black 20px 10px 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.progressbarWrapper {
+  height: 30px;
+  width: 350px;
+  display: block;
+  position: relative;
+  background: #555;
+  padding: 3px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+#greenBarone {
+  display: block;
+  height: 100%;
+  width: 0px;
+  background-color: rgb(43, 194, 83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43, 194, 83) 37%,
+    rgb(84, 240, 84) 69%
+  );
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+}
+
+#greenBartwo {
+  display: block;
+  height: 100%;
+  width: 0px;
+  background-color: rgb(43, 194, 83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43, 194, 83) 37%,
+    rgb(84, 240, 84) 69%
+  );
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+}
+
+#blueBartwo {
+  display: block;
+  height: 100%;
+  width: 0px;
+  background-color: rgb(19, 41, 209);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(19, 41, 209) 37%,
+    rgb(81, 103, 240) 69%
+  );
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+}
+
+#initialScreen span {
+  position: absolute;
+  display: block;
+}
+
+#initialScreen span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -50%;
+  }
+  50%,
+  100% {
+    left: 50%;
+  }
+}
+
+#initialScreen span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -50%;
+  }
+  50%,
+  100% {
+    top: 50%;
+  }
+}
+
+#initialScreen span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -50%;
+  }
+  50%,
+  100% {
+    right: 50%;
+  }
+}
+
+#initialScreen span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -50%;
+  }
+  50%,
+  100% {
+    bottom: 50%;
+  }
+}
+
+.Button {
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin: 10px;
+
+  padding: 1em 1.2em;
+  border: 0.1em solid #000000;
+
+
+  font-weight: 300;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+
+  background-color: #42cc8c;
+}
+.Button:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+input[type=text] {
+  width: 90%;
+  padding: 13px;
+  margin: 5px 10px;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}

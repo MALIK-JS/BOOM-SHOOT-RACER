@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="myGame">
+      <div id="initialScreen">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <h2>BOOM SHOOT</h2>
+        <button type="submit" id="newGameComp" class="Button">NEW GAME</button>
+
+        <button type="submit" id="newGameButton" class="Button">
+          PLAY WITH A FRIEND
+        </button>
+        <button type="submit" id="HowToButton" class="Button">
+          HOW TO PLAY
+        </button>
+
+        <div class="modal hidden">
+          <button class="close-modal">&times;</button>
+          <h1>BOOM SHOOT GAME</h1>
+          <p>
+            YOU'LL NEED TO GET FUEL BEFORE YOU RUN OUT OF IT. <br />
+            THE FUEL IS THE RED CIRCLE. <br />
+            YOU MOVE BY USING THE ARROW KEYS ON YOUR KEYBOARD. <br />
+            UP ARROW : TO GO UP. <br />
+            DOWN ARROW : TO GO DOWN. <br />
+            RIGHT ARROW : TO GO RIGHT. <br />
+            LEFT ARROW : TO GO LEFT .<br />
+            IN MEANTIME YOU HAVE TO AVOIDE THE COP CAR AND IN CASXE YOU CRASH ON
+            IT YOU'LL LOSE THE GAME <br />
+            HAVE FUN.
+          </p>
+        </div>
+        <div class="overlay hidden"></div>
+
+        <div><p style="color: #fff">OR</p></div>
+
+
+        <input type="text" placeholder="Enter Game Code" id="gameCodeInput" />
+
+        <button type="submit" class="Button" id="joinGameButton">
+          JOIN A GAME WITH FRIEND
+        </button>
+        <button type="submit" class="Button" id="watchGameButton">
+          WATCH FRIENDS
+        </button>
+      </div>
+
+      <div id="gameScreen">
+        <h2 id="gameCoding">
+          YOUR GAME CODE IS: <span id="gameCodeDisplay"></span> SEND IT TO YOUR FRIEND
+        </h2>
+
+        <div class="container">
+          <div class="progressbarWrapper">
+            <span id="greenBarone"></span>
+          </div>
+          <div class="progressbarWrapper" id="playerTwoBar">
+            <span id="blueBartwo"></span>
+          </div>
+        </div>
+
+        <canvas id="game-scrn"></canvas>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

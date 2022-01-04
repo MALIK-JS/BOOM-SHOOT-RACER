@@ -99,7 +99,9 @@ io.on("connect", (client) => {
 
 function startGameIntervalWatching(roomName) {
   const intervalId = setInterval(() => {
-    emitGameState(roomName, state[roomName]);
+    if (state[roomName]) {
+      emitGameState(roomName, state[roomName]);
+    } else clearInterval(intervalId);
   }, 1000 / FRAME_RATE);
 }
 function startGameInterval(roomName, client = null) {
